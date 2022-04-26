@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frontend</title>
+    <style>
+        #container{
+            display: flex;
+        }
+        #box>p+img{
+            width: 40%;
+        }
+        #box{
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var data=JSON.parse(localStorage.getItem("backendstore"));
+    // var kit=data.map(function(el){
+    //     return el;
+    // })
+ 
+        var container=document.createElement("div");
+    container.setAttribute("id","container");
+    for(var i=0;i<data.length;i++){
+    var box=document.createElement("div");
+    box.setAttribute("id","box");
+    var img=document.createElement("img");
+    var investorname=document.createElement("h3");
+    var role=document.createElement("p");
+    var logo=document.createElement("img");
+    document.body.append(container);
+    container.appendChild(box);
+    box.appendChild(img);
+    box.appendChild(investorname);
+    box.appendChild(role);
+    box.appendChild(logo);
+    img.srcset=data[i].imageUrl;
+    investorname.innerText=data[i].name;
+    role.innerText=data[i].role;
+    logo.srcset=data[i].logo;
+    }
+    
+    
+</script>

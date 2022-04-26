@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+    <link rel="stylesheet" href="navstyle.css">
+</head>
+<body>
+    <form id="form">
+        <input type="text" placeholder="Enter Image URL" id="imgUrl">
+        <input type="text" placeholder="Enter Investor name" id="name">
+        <input type="text" placeholder="Enter Investor Role" id="role">
+        <input type="text" placeholder="Enter Company Logo URL" id="logo">
+        <input id="btn" type="submit">
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#btn").addEventListener("click",store);
+    var arr=JSON.parse(localStorage.getItem("backendstore")) || [];
+    function store(){
+        event.preventDefault();
+
+        var imageUrl=document.querySelector("#imgUrl").value;
+        var name=document.querySelector("#name").value;
+        var role=document.querySelector("#role").value;
+        var logo=document.querySelector("#logo").value;
+        var data={imageUrl:imageUrl,name:name,role:role,logo:logo};
+        arr.push(data);
+            var kit=localStorage.setItem("backendstore",JSON.stringify(arr));
+          
+    }
+</script>
