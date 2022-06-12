@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.835);
+    background-image: url("https://images.pexels.com/photos/750843/pexels-photo-750843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    ;
+    background-blend-mode: hard-light;
+}
+#navbar{
+    display: flex;
+    background-color: gold;
+    height: 50px;
+    align-items: center;
+}
+#navbar>h3{
+    margin: 0 5%;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#signup,#signin{
+    background-color: black;
+    width: 30%;
+    margin: 5% auto;
+    color: gold;
+    border: 2px solid gold;
+    padding: 10px;
+    border-radius: 10px;
+}
+label{
+    display: block;
+}
+::placeholder{
+    color: gold;
+}
+input{
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    width: 90%;
+    display: block;
+    background-color: black;
+    outline: none;
+    border: 1px solid gold;
+    color: gold;
+    font-size: 16px;
+}
+#btn{
+    width: 98%;
+}
+#btn:hover{
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+}
+#infoDiv{
+    border: 1px solid red;
+}
+@media all and (max-width: 480px){
+    #navbar>h3{
+        font-size: 12px;
+        margin: 2% 0;
+    }
+
+    #search{
+        width: 95%;
+    }
+    #navbar{
+        display: block;
+        text-align: center;
+        height: auto;
+        padding: 5px;
+        background-color: rgba(255, 217, 0, 0.726);
+    }
+    #signin,#signup{
+        width: 70%;
+    }
+}

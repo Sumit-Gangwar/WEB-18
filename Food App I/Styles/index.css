@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.835);
+    background-image: url("https://images.pexels.com/photos/750843/pexels-photo-750843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    ;
+    background-blend-mode: hard-light;
+}
+#navbar{
+    display: flex;
+    background-color: gold;
+    height: 50px;
+    align-items: center;
+}
+#navbar>h3{
+    margin: 0 5%;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#search{
+    width: 60%;
+    margin: 5% auto 0px;
+}
+input{
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(54, 53, 53);
+    color: gold;
+    border: none;
+    font-size: 17px;
+    outline: none;
+    width: 96.5%;
+}
+::placeholder{
+    color: gold;
+}
+#container{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(54, 53, 53);
+    color: gold;
+    display: none;
+    max-height: 60vh;
+    overflow-y: scroll;
+    margin: auto;
+    width: 60%;
+    animation-name: moveDown;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: inherit;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gold;
+    border-radius: 10px;
+}
+@keyframes moveDown{
+    from{
+        transform: translateY(-10px);
+        opacity: 0.4;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.box>img{
+    width: 10%;
+ 
+}
+.box{
+    display: flex;
+    margin: 2%;
+    justify-content: space-between;
+}
+
+@media all and (max-width: 480px){
+    #navbar>h3{
+        font-size: 12px;
+        margin: 2% 0;
+    }
+
+    #search{
+        width: 95%;
+    }
+    #navbar{
+        display: block;
+        text-align: center;
+        height: auto;
+        padding: 5px;
+        background-color: rgba(255, 217, 0, 0.726);
+    }
+    #container{
+        width: 95%;
+    }
+    input{
+        padding: 10px;
+        font-size: 12px;
+        width: 95%
+    }
+    .box>img{
+        width: 30%;
+    }
+    .box{
+        font-size: 12px;
+    }
+}
+
