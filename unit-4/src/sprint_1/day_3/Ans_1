@@ -1,0 +1,28 @@
+1. Static variable :-
+
+Static variables are accessible only in static class. static variables loaded into RAM first and will be available for the execution. execution started from main method and will sent static elements to the cpu for execution. For example :-
+
+public class Car {
+   static String color = "Red"; // color is static variable that's why is accessible to main method;
+
+    public static void main(String[] args) {
+        System.out.println(color);
+    }
+}
+
+2. Non-static variable :-
+
+Non-static elements stored in hard disk in the form of Byte code in (.class) file and can be accessed only by creating Objects. It will not be loaded into RAM initially hence not available for the execution. For example :-
+
+public class Car {
+    String color = "Red";
+
+
+    public static void main(String[] args) {
+//        System.out.println(color); // This will throw an error because color is non-static variable hence can't be accessed in static method
+        Car Ck = new Car(); // creating a object of class
+        System.out.println(Ck.color); // accessing properties of class using object
+    }
+
+
+}
